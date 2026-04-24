@@ -11,21 +11,25 @@
         <h1>World Clock</h1>
         
         <div class="clock-display-section">
-            <div id="clock" class="clock">00:00:00</div>
+            <div id="clock" class="clock" aria-label="Current time display" aria-live="polite">00:00:00</div>
         </div>
 
-        <div class="controls-section">
+        <form class="controls-section">
             <label for="country-select" class="label">Select Country:</label>
             <select id="country-select" class="dropdown">
                 <option value="">-- Choose a Country --</option>
             </select>
-        </div>
+        </form>
 
         <div class="timezone-section">
             <p>Timezone: <span id="timezone-label">--</span></p>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
+
+    <noscript>
+    <p>This application requires JavaScript to be enabled to display the current time and select timezones.</p>
+</noscript>
 </body>
 </html>
